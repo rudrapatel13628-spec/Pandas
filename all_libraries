@@ -1,0 +1,16 @@
+so first we have to write python -m pip install Library
+
+
+| Library        | Purpose                              |
+| -------------- | ------------------------------------ |
+| `pandas`       | Data handling and DataFrames         |
+| `numpy`        | Numerical calculations and arrays    |
+| `matplotlib`   | Creating charts and plots            |
+| `seaborn`      | Advanced statistical visualization   |
+| `openpyxl`     | Reading/writing Excel `.xlsx` files  |
+| `pyarrow`      | Reading/writing Parquet files        |
+| `fastparquet`  | Alternative engine for Parquet files |
+| `scipy`        | Scientific computing and statistics  |
+| `scikit-learn` | Machine learning algorithms          |
+| `jupyter`      | Running Jupyter Notebook             |
+| `notebook`     | Jupyter Notebook interface           |
