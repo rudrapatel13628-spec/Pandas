@@ -516,9 +516,23 @@ print(bios[["height_cm","height_category"]])
 def categorize_athlete(row):
     if row['height_cm'] < 175 and row['weight_kg'] < 70:
         return 'Lightweight'
-    elif row['height'] < 185 or row['weight_kg'] <=80:
+    elif row['height_cm'] < 185 or row['weight_kg'] <=80:
         return 'Middleweight'
     else :
         return 'Heavyweight'
     
-bios['category']
+bios['category'] = bios.apply(categorize_athlete,axis=1)
+"""
+apply():
+apply() runs a function on a DataFrame.
+axis=1 means:
+Apply the function row by row
+"""
+print(bios['category'].head())
+"""
+0     Heavyweight
+1    Middleweight
+2    Middleweight
+3     Lightweight
+4     Heavyweight
+"""
