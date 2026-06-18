@@ -497,3 +497,19 @@ print(bios_new[["name","born_year"]].head())
 4           Albert Canet     1878.0
 """
 bios_new.to_csv(r"C:\Users\HP\OneDrive\Desktop\Panda\complete-pandas-tutorial\rudra.csv" , index = False)
+bios["height_category"] = bios["height_cm"].apply(lambda x: 'short' if x < 165 else ('average' if x < 185 else 'tall'))
+print(bios[["height_cm","height_category"]])
+"""
+        height_cm height_category
+0             NaN            tall
+1           183.0         average
+2           183.0         average
+3           168.0         average
+4             NaN            tall
+...           ...             ...
+145495      167.0         average
+145496      168.0         average
+145497      163.0           short
+145498      166.0         average
+145499        NaN            tall
+"""
