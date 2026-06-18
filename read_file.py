@@ -513,3 +513,12 @@ print(bios[["height_cm","height_category"]])
 145498      166.0         average
 145499        NaN            tall
 """
+def categorize_athlete(row):
+    if row['height_cm'] < 175 and row['weight_kg'] < 70:
+        return 'Lightweight'
+    elif row['height'] < 185 or row['weight_kg'] <=80:
+        return 'Middleweight'
+    else :
+        return 'Heavyweight'
+    
+bios['category']
